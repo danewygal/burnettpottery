@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Burnett Pottery">
+<meta property="og:description" content="Handmade pottery for the kitchen and garden by three generations of the Burnett family in Southern California.">
+<meta property="og:image" content="https://burnettpottery.com/img/img_9533.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232546A6'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-style='italic' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Burnett Pottery</title>
+<meta name="description" content="Handmade pottery for the kitchen and garden by three generations of the Burnett family in Southern California.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Patrick+Hand&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: a craft-fair table in the garden. Checkered glaze bands (from the flyer and the birdbath bases) frame one long scroll:
+   name + three snapshots (kitchen, garden, fairy garden), the facts, the story, clay-to-kiln, the photo lineup, shows, contact. */
+:root{
+  --glaze:#F4F6F3;      /* porcelain ground */
+  --surface:#FFFFFF;
+  --ink:#1B2232;        /* blue-black brushwork */
+  --muted:#545D70;
+  --cobalt:#2546A6;     /* cobalt glaze */
+  --cornflower:#5A80CF; /* lighter glaze blue, second tone */
+  --sky:#D5E6EF;        /* the flyer's blue paper */
+  --cherry:#C2352B;
+  --line:#D9DFE3;
+  --on-cobalt:#FFFFFF;
+  --ink-filter:none;
+  --shadow:0 1px 2px rgba(27,34,50,.08),0 8px 24px rgba(27,34,50,.10);
+  --f-display:"Cormorant Garamond","Book Antiqua","Palatino Linotype",Palatino,Georgia,serif;
+  --f-body:"EB Garamond",Garamond,"Book Antiqua",Palatino,Georgia,serif;
+  --f-hand:"Patrick Hand","Comic Neue","Bradley Hand",cursive;
+  --f-calli:"Pinyon Script","Edwardian Script ITC","Snell Roundhand",cursive;
+  /* saved for later use, per Dane: --f-script:"Dancing Script" (add to the font link when used) */
+  --wrap:72rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --glaze:#121722;--surface:#1A2130;--ink:#ECEFF4;--muted:#A6AEBD;--cobalt:#93AAF2;--cornflower:#C6D4F8;--sky:#1D2C3C;--cherry:#F08174;--line:#2B3446;--on-cobalt:#121722;--ink-filter:invert(1) brightness(.92);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --glaze:#121722;--surface:#1A2130;--ink:#ECEFF4;--muted:#A6AEBD;--cobalt:#93AAF2;--cornflower:#C6D4F8;--sky:#1D2C3C;--cherry:#F08174;--line:#2B3446;--on-cobalt:#121722;--ink-filter:invert(1) brightness(.92);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--glaze);color:var(--ink);font-family:var(--f-body);font-size:1.2rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--cobalt);text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.02;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.hand{font-family:var(--f-hand);font-size:1.25rem;line-height:1.2;color:var(--cobalt)}
+
+/* checkered glaze band */
+.checks{height:16px;background:conic-gradient(var(--cobalt) 25%,transparent 0 50%,var(--cobalt) 0 75%,transparent 0) 0 0/16px 16px;opacity:.9}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--glaze) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:12px}
+.mark{font-family:var(--f-display);font-weight:700;font-size:1.85rem;color:var(--cobalt);text-decoration:none;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:4px 20px;flex-wrap:wrap;font-weight:600;font-size:1.1rem}
+.nav a{color:var(--ink);text-decoration:none;padding-block:6px}
+.nav a:hover{color:var(--cobalt)}
+.ig{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:var(--cobalt)}
+.ig:hover{background:var(--sky)}
+.ig svg{width:22px;height:22px}
+@media (max-width:640px){.nav .hide-sm{display:none}.chips{position:static}}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(48px,7vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(3.8rem,10vw,7.6rem);letter-spacing:-.01em;display:flex;flex-direction:column;line-height:.9}
+.hero h1 .w1{font-family:var(--f-calli);font-weight:400;color:var(--cornflower);font-size:1.05em;line-height:1.05;margin-bottom:-.2em;letter-spacing:0}
+.hero h1 .w2{font-style:italic;color:var(--cobalt);padding-left:.35em}
+.mark{font-style:italic}
+.mark span{font-family:var(--f-calli);font-weight:400;font-style:normal;color:var(--cornflower);font-size:1.2em}
+.hero .lede{margin-top:20px;font-size:clamp(1.1rem,1.6vw,1.3rem);max-width:30ch;color:var(--muted)}
+.hero .hand{margin-bottom:10px;font-size:1.6rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:1.1rem;text-decoration:none;border:2px solid var(--cobalt)}
+.btn.solid{background:var(--cobalt);color:var(--on-cobalt)}
+.btn.solid:hover{filter:brightness(1.08)}
+.btn.ghost{color:var(--cobalt)}
+.btn.ghost:hover{background:var(--sky)}
+.btn svg{width:18px;height:18px}
+
+.snaps{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto;gap:18px;align-items:start}
+.snap{margin:0;background:var(--surface);padding:10px 10px 8px;border-radius:6px;box-shadow:var(--shadow)}
+.snap img{width:100%;object-fit:cover;border-radius:3px}
+.snap figcaption{font-family:var(--f-hand);font-size:1.2rem;color:var(--ink);padding:8px 4px 2px;text-align:center}
+.snap.a{grid-row:1/3;transform:rotate(-1.6deg)}
+.snap.a img{aspect-ratio:4/5}
+.snap.b{transform:rotate(1.4deg);margin-top:8px}
+.snap.c{transform:rotate(-.8deg)}
+.snap.b img,.snap.c img{aspect-ratio:1/1}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .lede{max-width:40ch}}
+@media (max-width:420px){.snaps{gap:12px}.snap{padding:6px 6px 4px}.snap figcaption{font-size:1.05rem}}
+
+/* facts band */
+.facts{background:var(--sky)}
+.facts .wrap{padding-block:clamp(28px,4vw,44px)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.facts li{display:flex;flex-direction:column;gap:4px;min-width:0}
+.facts b{font-family:var(--f-display);font-weight:700;font-size:clamp(2.3rem,4.2vw,3.1rem);line-height:1;color:var(--cobalt);font-variant-numeric:tabular-nums}
+.facts span{font-size:.98rem;color:var(--ink)}
+.facts .note{margin-top:22px;font-size:1rem;color:var(--muted);max-width:60ch}
+@media (max-width:760px){.facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* section scaffolding */
+section{padding-block:clamp(56px,8vw,104px)}
+.kicker{font-family:var(--f-hand);font-size:1.45rem;line-height:1.1;color:var(--cherry);margin-bottom:6px}
+.sec-title{font-size:clamp(2.6rem,5.8vw,4rem)}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:stretch}
+.story-text{display:flex;flex-direction:column;gap:18px;max-width:62ch}
+.story-text .sec-title{margin-bottom:6px}
+.drawing{margin:0;background:var(--sky);border-radius:10px;padding:clamp(16px,2.5vw,28px);display:flex;flex-direction:column;justify-content:center}
+.drawing img{width:100%;height:auto;filter:var(--ink-filter)}
+.drawing figcaption{margin-top:12px;text-align:center}
+.family{margin:clamp(40px,6vw,72px) 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.family img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 30%;border-radius:8px}
+.family figcaption{font-family:var(--f-hand);font-size:1.3rem;color:var(--ink)}
+@media (max-width:820px){.story-grid{grid-template-columns:minmax(0,1fr)}.drawing{max-width:420px}.family img{aspect-ratio:4/3}}
+
+/* clay to kiln */
+.kiln{background:var(--surface);border-block:1px solid var(--line)}
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,36px);counter-reset:step}
+.steps li{display:flex;flex-direction:column;gap:12px;min-width:0;counter-increment:step}
+.steps figure{margin:0;display:flex;flex-direction:column;gap:6px}.steps img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px}.steps figcaption{font-family:var(--f-hand);font-size:1.2rem;color:var(--ink)}
+.steps h3{font-size:1.8rem;display:flex;align-items:baseline;gap:10px}
+.steps h3::before{content:counter(step);font-family:var(--f-hand);font-size:1.5rem;color:var(--on-cobalt);background:var(--cobalt);width:34px;height:34px;border-radius:50%;display:inline-grid;place-items:center;flex:none;line-height:1}
+.steps p{color:var(--muted);max-width:40ch}
+.steps video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;display:block;background:var(--sky)}
+.watch{margin-top:clamp(48px,6vw,80px);display:flex;flex-direction:column;gap:18px}
+.watch h3{font-size:clamp(2rem,3.8vw,2.6rem)}
+.watch-grid{display:grid;grid-template-columns:minmax(0,3.16fr) minmax(0,1fr);gap:clamp(14px,2vw,24px);align-items:start}
+.watch figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.watch video{width:100%;border-radius:8px;display:block;background:var(--sky)}
+.watch .wide video{aspect-ratio:16/9;object-fit:cover}
+.watch .tall video{aspect-ratio:9/16;object-fit:cover}
+.watch figcaption{font-family:var(--f-hand);font-size:1.2rem;line-height:1.25;color:var(--ink)}
+@media (max-width:760px){.watch-grid{grid-template-columns:minmax(0,1fr)}.watch .tall{max-width:340px}}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}.steps img{aspect-ratio:3/2}}
+
+/* lineup */
+.lineup-head{display:flex;flex-direction:column;gap:14px;max-width:60ch}
+.lineup-head p{color:var(--muted)}
+.chips{position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px);z-index:10;margin-top:28px;padding-block:10px;background:var(--glaze);display:flex;gap:8px;flex-wrap:wrap}
+.chips a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-weight:600;font-size:1.05rem;text-decoration:none}
+.chips a:hover{border-color:var(--cobalt);color:var(--cobalt)}
+.chips a span{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500;margin-left:6px}
+.cat{padding-top:44px}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;margin-bottom:20px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.cat-head h3{font-size:clamp(2.2rem,4.2vw,2.9rem)}
+.cat-head p{color:var(--muted);max-width:52ch}
+.grid{columns:3 240px;column-gap:16px}
+.tile{display:block;width:100%;margin:0 0 16px;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;text-align:left;color:inherit;font:inherit;border-radius:8px}
+.tile img{width:100%;border-radius:8px;background:var(--sky)}
+.tile span{display:block;font-size:.92rem;color:var(--muted);padding:8px 2px 0}
+@media (prefers-reduced-motion:no-preference){.tile img{transition:transform .25s ease,box-shadow .25s ease}.tile:hover img{transform:translateY(-3px);box-shadow:var(--shadow)}}
+
+/* shows */
+.shows{background:var(--sky)}
+.shows-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center}
+.shows-text{display:flex;flex-direction:column;gap:18px}
+.upcoming{background:var(--surface);border-radius:10px;padding:22px 24px;display:flex;flex-direction:column;gap:8px;border:1.5px dashed color-mix(in srgb,var(--cobalt) 45%,transparent)}
+.upcoming h3{font-family:var(--f-hand);font-weight:400;font-size:1.4rem;color:var(--cherry)}
+.show{display:flex;flex-direction:column;gap:2px;padding-block:6px 10px;border-bottom:1px solid var(--line)}
+.show b{font-family:var(--f-display);font-weight:700;font-size:1.7rem;line-height:1.1;color:var(--ink)}
+.show span{color:var(--muted)}
+.show time{font-weight:600;color:var(--cobalt)}
+.upcoming p{color:var(--ink)}
+.pay{font-size:.98rem;color:var(--muted)}
+.booth{margin:0}
+.booth img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.booth figcaption{font-family:var(--f-hand);font-size:1.2rem;margin-top:8px}
+@media (max-width:820px){.shows-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* contact */
+.contact .wrap{display:flex;flex-direction:column;gap:18px;max-width:46rem;text-align:center;align-items:center}
+.contact p{color:var(--muted);max-width:48ch}
+.email{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:6px}
+.email a{font-family:var(--f-display);font-weight:700;font-size:clamp(1.7rem,4.6vw,2.5rem);text-decoration:none;user-select:all;overflow-wrap:anywhere}
+.copy{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:600 1rem var(--f-body);cursor:pointer}
+.copy:hover{border-color:var(--cobalt)}
+
+/* footer */
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;padding-block:24px 32px;color:var(--muted);font-size:.92rem}
+footer .hand{font-size:1.2rem}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1100px);max-height:94vh;width:100%;color:#fff}
+dialog.lb::backdrop{background:rgba(10,14,22,.88)}
+.lb-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+.lb img{max-height:80vh;width:auto;max-width:100%;border-radius:6px}
+.lb-row{display:flex;align-items:center;justify-content:center;gap:12px;width:100%}
+.lb-cap{font-family:var(--f-hand);font-size:1.35rem;text-align:center;flex:1;min-width:0}
+.lb button{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none}
+.lb button:hover{background:rgba(255,255,255,.2)}
+.lb button svg{width:22px;height:22px}
+.lb .x{position:absolute;top:0;right:0}
+</style>
+
+</head>
+<body>
+<div class="checks" aria-hidden="true"></div>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top"><span>Burnett</span> Pottery</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#story">Our Story</a>
+      <a href="#make">What We Make</a>
+      <a href="#shows" class="hide-sm">Shows</a>
+      <a href="#contact">Contact</a>
+      <a class="ig" href="https://www.instagram.com/jenniferburnettpottery/" target="_blank" rel="noopener" aria-label="Burnett Pottery on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hand">Phyllis, Jennifer &amp; Kate</p>
+        <h1><span class="w1">Burnett</span><span class="w2">Pottery</span></h1>
+        <p class="lede">Handmade, hand-painted pottery for the kitchen and garden, from three generations of one Southern California family.</p>
+        <div class="ctas">
+          <a class="btn solid" href="#make">See what we make</a>
+          <a class="btn ghost" href="https://www.instagram.com/jenniferburnettpottery/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Follow along</a>
+        </div>
+      </div>
+      <div class="snaps">
+        <figure class="snap a"><img src="img/img_9533.jpg" alt="Sunflower birdbath in the garden" width="1350" height="1800"><figcaption>for the garden</figcaption></figure>
+<figure class="snap b"><img src="img/img_0224.jpg" alt="Hand-painted wildflower plate" width="1350" height="1800"><figcaption>for the kitchen</figcaption></figure>
+<figure class="snap c"><img src="img/img_8746.jpg" alt="Fairy garden with a mushroom house" width="1350" height="1800"><figcaption>for a little whimsy</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><b>40+</b><span>years making pottery together</span></li>
+        <li><b>Three</b><span>generations of potters</span></li>
+        <li><b>High-fired</b><span>to 2400°F (cone 10) in a gas kiln</span></li>
+        <li><b>Lead-free</b><span>glazes and stains, painted by hand</span></li>
+      </ul>
+      <p class="note">That high firing is what makes it tough. It goes in the microwave, the oven and the dishwasher, and it can live outside in your garden without fading.</p>
+    </div>
+  </div>
+
+  <section id="story">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="kicker">Our story</p>
+          <h2 class="sec-title">Mother, daughter, granddaughter</h2>
+          <p>We're three generations of potters: Phyllis Burnett, her daughter Jennifer, and Jennifer's daughter Kate Wygal. We've been making pottery together for more than 40 years.</p>
+          <p>Everything we sell, we make. Some pieces are thrown on the wheel; others are rolled out in slabs and built by hand. Then each one is glazed and painted, one at a time, with lead-free glazes and stains. Cherries, strawberries, wildflowers, butterflies, little frogs. Whatever ends up on a piece, one of us painted it.</p>
+          <p>No two come out quite alike. A little variation in size or glaze is part of handmade, and honestly, it's our favorite part. Thank you for collecting our work. We hope you enjoy it as much as we enjoy making it.</p>
+        </div>
+        <figure class="drawing">
+          <img src="img/flyer-drawing.png" width="801" height="900" alt="Line drawing of Phyllis and Jennifer hugging, surrounded by stacks of hand-painted pots">
+          <figcaption class="hand">Phyllis &amp; Jennifer, from our show flyer</figcaption>
+        </figure>
+      </div>
+      <figure class="family">
+        <img src="img/c7p4hyjjxe-_01.jpg" alt="Jennifer, Kate and Phyllis at the booth" width="960" height="1200" loading="lazy" decoding="async">
+        <figcaption>Jennifer, Kate &amp; Phyllis at the booth</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="kiln" aria-labelledby="kiln-h">
+    <div class="wrap">
+      <p class="kicker">How it's made</p>
+      <h2 class="sec-title" id="kiln-h">From clay to kiln</h2>
+      <ol class="steps">
+        <li><figure><img src="img/img_6201.jpg" alt="Kate at work" width="1800" height="1350" loading="lazy" decoding="async"><figcaption>Kate at work</figcaption></figure><h3>Made by hand</h3><p>Every piece starts as plain clay, thrown on the wheel or rolled into slabs and shaped by hand. Then it gets glazed and painted, one at a time.</p></li>
+<li><figure><img src="img/img_7988_2.jpg" alt="Phyllis at the kiln" width="1350" height="1800" loading="lazy" decoding="async"><figcaption>Phyllis at the kiln</figcaption></figure><h3>Loading the kiln</h3><p>Everything goes into the gas kiln and fires to cone 10, about 2400°F.</p></li>
+<li><figure><video src="vid/kiln-opening.mp4" poster="vid/kiln-opening.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Walking up to the opened kiln, its shelves full of glazed pottery"></video><figcaption>Opening the kiln</figcaption></figure><h3>Unloading after the firing</h3><p>High firing makes it tough enough for the dishwasher, the oven and a year outside in the garden.</p></li>
+      </ol>
+      <div class="watch">
+        <p class="kicker">Watch us work</p>
+        <div class="watch-grid">
+          <figure class="wide">
+            <video src="vid/bird-shaping.mp4" poster="vid/bird-shaping.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Hands shaping a small clay bird, sped up"></video>
+            <figcaption>Jen shaping a bird, sped up 4×</figcaption>
+          </figure>
+          <figure class="tall">
+            <video src="vid/snowman-sprinkles-cut.mp4" poster="vid/snowman-sprinkles.jpg" controls playsinline preload="none" aria-label="Jen adding sprinkles to a snowman ornament, with narration"></video>
+            <figcaption>Jen shows how the snowmen get their sprinkles. Sound on.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="make">
+    <div class="wrap">
+      <div class="lineup-head">
+        <p class="kicker">What we make</p>
+        <h2 class="sec-title">Out of the kiln</h2>
+        <p>No prices here. To us, every piece is priceless. Come to a show and see how affordable they really are, and know that every one is a little different. Tap any photo to see it bigger.</p>
+      </div>
+      <nav class="chips" aria-label="Pottery categories">
+        <a href="#kitchen">Kitchen<span>14</span></a>
+<a href="#garden">Garden<span>17</span></a>
+<a href="#fairy">Fairy Garden<span>12</span></a>
+<a href="#gifts">Gifts &amp; Seasonal<span>13</span></a>
+      </nav>
+      <div class="cat" id="kitchen"><div class="cat-head"><h3>Kitchen</h3><p>Plates, bowls, colanders, pitchers, mugs and butter dishes, made to be used every day.</p></div><div class="grid"><button class="tile" type="button" data-full="img/img_0224.jpg" data-alt="Wildflower dinner plate" aria-label="View larger: Wildflower dinner plate"><img src="img/img_0224.jpg" alt="Wildflower dinner plate" width="1350" height="1800" loading="lazy" decoding="async"><span>Wildflower dinner plate</span></button>
+<button class="tile" type="button" data-full="img/img_7296.jpg" data-alt="Painted bowls" aria-label="View larger: Painted bowls"><img src="img/img_7296.jpg" alt="Painted bowls" width="975" height="1300" loading="lazy" decoding="async"><span>Painted bowls</span></button>
+<button class="tile" type="button" data-full="img/img_0226.jpg" data-alt="Bowls and a wildflower plate" aria-label="View larger: Bowls and a wildflower plate"><img src="img/img_0226.jpg" alt="Bowls and a wildflower plate" width="975" height="1300" loading="lazy" decoding="async"><span>Bowls and a wildflower plate</span></button>
+<button class="tile" type="button" data-full="img/img_8557.jpg" data-alt="Wreath platter" aria-label="View larger: Wreath platter"><img src="img/img_8557.jpg" alt="Wreath platter" width="975" height="1300" loading="lazy" decoding="async"><span>Wreath platter</span></button>
+<button class="tile" type="button" data-full="img/img_8554.jpg" data-alt="Pitchers" aria-label="View larger: Pitchers"><img src="img/img_8554.jpg" alt="Pitchers" width="975" height="1300" loading="lazy" decoding="async"><span>Pitchers</span></button>
+<button class="tile" type="button" data-full="img/img_0318.jpg" data-alt="Nesting flower bowls" aria-label="View larger: Nesting flower bowls"><img src="img/img_0318.jpg" alt="Nesting flower bowls" width="975" height="1300" loading="lazy" decoding="async"><span>Nesting flower bowls</span></button>
+<button class="tile" type="button" data-full="img/c7p5zqhpaal_01.jpg" data-alt="Cherry colander on a scalloped plate" aria-label="View larger: Cherry colander on a scalloped plate"><img src="img/c7p5zqhpaal_01.jpg" alt="Cherry colander on a scalloped plate" width="1280" height="1600" loading="lazy" decoding="async"><span>Cherry colander on a scalloped plate</span></button>
+<button class="tile" type="button" data-full="img/img_3503_2.jpg" data-alt="Heart colander" aria-label="View larger: Heart colander"><img src="img/img_3503_2.jpg" alt="Heart colander" width="1300" height="975" loading="lazy" decoding="async"><span>Heart colander</span></button>
+<button class="tile" type="button" data-full="img/img_7307.jpg" data-alt="Blue iris mugs" aria-label="View larger: Blue iris mugs"><img src="img/img_7307.jpg" alt="Blue iris mugs" width="1300" height="975" loading="lazy" decoding="async"><span>Blue iris mugs</span></button>
+<button class="tile" type="button" data-full="img/img_8636.jpg" data-alt="Butter dishes" aria-label="View larger: Butter dishes"><img src="img/img_8636.jpg" alt="Butter dishes" width="975" height="1300" loading="lazy" decoding="async"><span>Butter dishes</span></button>
+<button class="tile" type="button" data-full="img/img_8613.jpg" data-alt="LOVE plate" aria-label="View larger: LOVE plate"><img src="img/img_8613.jpg" alt="LOVE plate" width="975" height="1300" loading="lazy" decoding="async"><span>LOVE plate</span></button>
+<button class="tile" type="button" data-full="img/img_6269.jpg" data-alt="Bluebonnet pitchers" aria-label="View larger: Bluebonnet pitchers"><img src="img/img_6269.jpg" alt="Bluebonnet pitchers" width="975" height="1300" loading="lazy" decoding="async"><span>Bluebonnet pitchers</span></button>
+<button class="tile" type="button" data-full="img/img_8450.jpg" data-alt="Flower vase" aria-label="View larger: Flower vase"><img src="img/img_8450.jpg" alt="Flower vase" width="975" height="1300" loading="lazy" decoding="async"><span>Flower vase</span></button>
+<button class="tile" type="button" data-full="img/img_5779.jpg" data-alt="Veggie mugs" aria-label="View larger: Veggie mugs"><img src="img/img_5779.jpg" alt="Veggie mugs" width="1300" height="975" loading="lazy" decoding="async"><span>Veggie mugs</span></button></div></div>
+<div class="cat" id="garden"><div class="cat-head"><h3>Garden</h3><p>Birdbaths, birdhouses, garden signs, plaques, plant markers and critters that live outside year-round without fading.</p></div><div class="grid"><button class="tile" type="button" data-full="img/img_9533.jpg" data-alt="Sunflower birdbath" aria-label="View larger: Sunflower birdbath"><img src="img/img_9533.jpg" alt="Sunflower birdbath" width="1350" height="1800" loading="lazy" decoding="async"><span>Sunflower birdbath</span></button>
+<button class="tile" type="button" data-full="img/img_2163.jpg" data-alt="Checkered birdbath" aria-label="View larger: Checkered birdbath"><img src="img/img_2163.jpg" alt="Checkered birdbath" width="975" height="1300" loading="lazy" decoding="async"><span>Checkered birdbath</span></button>
+<button class="tile" type="button" data-full="img/img_7006_2.jpg" data-alt="Strawberry planter" aria-label="View larger: Strawberry planter"><img src="img/img_7006_2.jpg" alt="Strawberry planter" width="975" height="1300" loading="lazy" decoding="async"><span>Strawberry planter</span></button>
+<button class="tile" type="button" data-full="img/img_1099_2.jpg" data-alt="Butterfly Garden sign" aria-label="View larger: Butterfly Garden sign"><img src="img/img_1099_2.jpg" alt="Butterfly Garden sign" width="975" height="1300" loading="lazy" decoding="async"><span>Butterfly Garden sign</span></button>
+<button class="tile" type="button" data-full="img/img_1100_2.jpg" data-alt="Cat Crossing sign" aria-label="View larger: Cat Crossing sign"><img src="img/img_1100_2.jpg" alt="Cat Crossing sign" width="975" height="1300" loading="lazy" decoding="async"><span>Cat Crossing sign</span></button>
+<button class="tile" type="button" data-full="img/img_7777_2.jpg" data-alt="Basket of flower stakes" aria-label="View larger: Basket of flower stakes"><img src="img/img_7777_2.jpg" alt="Basket of flower stakes" width="975" height="1300" loading="lazy" decoding="async"><span>Basket of flower stakes</span></button>
+<button class="tile" type="button" data-full="img/img_8653.jpg" data-alt="Ceramic succulents" aria-label="View larger: Ceramic succulents"><img src="img/img_8653.jpg" alt="Ceramic succulents" width="975" height="1300" loading="lazy" decoding="async"><span>Ceramic succulents</span></button>
+<button class="tile" type="button" data-full="img/img_0283.jpg" data-alt="Garden plaque with a bunny" aria-label="View larger: Garden plaque with a bunny"><img src="img/img_0283.jpg" alt="Garden plaque with a bunny" width="975" height="1300" loading="lazy" decoding="async"><span>Garden plaque with a bunny</span></button>
+<button class="tile" type="button" data-full="img/img_8075_3.jpg" data-alt="Vegetable and herb markers" aria-label="View larger: Vegetable and herb markers"><img src="img/img_8075_3.jpg" alt="Vegetable and herb markers" width="1300" height="975" loading="lazy" decoding="async"><span>Vegetable and herb markers</span></button>
+<button class="tile" type="button" data-full="img/img_9203.jpg" data-alt="Blue flower stakes" aria-label="View larger: Blue flower stakes"><img src="img/img_9203.jpg" alt="Blue flower stakes" width="975" height="1300" loading="lazy" decoding="async"><span>Blue flower stakes</span></button>
+<button class="tile" type="button" data-full="img/img_0799_2.jpg" data-alt="Bird in a planter" aria-label="View larger: Bird in a planter"><img src="img/img_0799_2.jpg" alt="Bird in a planter" width="1300" height="975" loading="lazy" decoding="async"><span>Bird in a planter</span></button>
+<button class="tile" type="button" data-full="img/img_2950.jpg" data-alt="Flowered birdhouse" aria-label="View larger: Flowered birdhouse"><img src="img/img_2950.jpg" alt="Flowered birdhouse" width="975" height="1300" loading="lazy" decoding="async"><span>Flowered birdhouse</span></button>
+<button class="tile" type="button" data-full="img/img_9541.jpg" data-alt="Beetles and cactus among the succulents" aria-label="View larger: Beetles and cactus among the succulents"><img src="img/img_9541.jpg" alt="Beetles and cactus among the succulents" width="975" height="1300" loading="lazy" decoding="async"><span>Beetles and cactus among the succulents</span></button>
+<button class="tile" type="button" data-full="img/img_0636.jpg" data-alt="Monarch butterfly" aria-label="View larger: Monarch butterfly"><img src="img/img_0636.jpg" alt="Monarch butterfly" width="1300" height="975" loading="lazy" decoding="async"><span>Monarch butterfly</span></button>
+<button class="tile" type="button" data-full="img/img_9322.jpg" data-alt="Sun faces" aria-label="View larger: Sun faces"><img src="img/img_9322.jpg" alt="Sun faces" width="975" height="1300" loading="lazy" decoding="async"><span>Sun faces</span></button>
+<button class="tile" type="button" data-full="img/ctmwyfxyvve_02.jpg" data-alt="Butterflies in a succulent planter" aria-label="View larger: Butterflies in a succulent planter"><img src="img/ctmwyfxyvve_02.jpg" alt="Butterflies in a succulent planter" width="1200" height="1200" loading="lazy" decoding="async"><span>Butterflies in a succulent planter</span></button>
+<button class="tile" type="button" data-full="img/img_2164.jpg" data-alt="Blue-roofed birdhouse" aria-label="View larger: Blue-roofed birdhouse"><img src="img/img_2164.jpg" alt="Blue-roofed birdhouse" width="975" height="1300" loading="lazy" decoding="async"><span>Blue-roofed birdhouse</span></button></div></div>
+<div class="cat" id="fairy"><div class="cat-head"><h3>Fairy Garden</h3><p>A tiny world of cottages, gnomes, toadstools, frogs, bunnies, puppies and kittens. Kids love it. So do grown-ups.</p></div><div class="grid"><button class="tile" type="button" data-full="img/img_8746.jpg" data-alt="Fairy garden with a mushroom house" aria-label="View larger: Fairy garden with a mushroom house"><img src="img/img_8746.jpg" alt="Fairy garden with a mushroom house" width="1350" height="1800" loading="lazy" decoding="async"><span>Fairy garden with a mushroom house</span></button>
+<button class="tile" type="button" data-full="img/img_5802.jpg" data-alt="Fairy garden with an arch" aria-label="View larger: Fairy garden with an arch"><img src="img/img_5802.jpg" alt="Fairy garden with an arch" width="1300" height="975" loading="lazy" decoding="async"><span>Fairy garden with an arch</span></button>
+<button class="tile" type="button" data-full="img/img_5545.jpg" data-alt="Fairy garden cottage" aria-label="View larger: Fairy garden cottage"><img src="img/img_5545.jpg" alt="Fairy garden cottage" width="1300" height="975" loading="lazy" decoding="async"><span>Fairy garden cottage</span></button>
+<button class="tile" type="button" data-full="img/dkmbwyrrz-f_10.jpg" data-alt="Strawberry mushroom house" aria-label="View larger: Strawberry mushroom house"><img src="img/dkmbwyrrz-f_10.jpg" alt="Strawberry mushroom house" width="900" height="1200" loading="lazy" decoding="async"><span>Strawberry mushroom house</span></button>
+<button class="tile" type="button" data-full="img/img_2989.jpg" data-alt="Fairy cottages" aria-label="View larger: Fairy cottages"><img src="img/img_2989.jpg" alt="Fairy cottages" width="1300" height="975" loading="lazy" decoding="async"><span>Fairy cottages</span></button>
+<button class="tile" type="button" data-full="img/img_0138.jpg" data-alt="Garden gnomes" aria-label="View larger: Garden gnomes"><img src="img/img_0138.jpg" alt="Garden gnomes" width="1300" height="975" loading="lazy" decoding="async"><span>Garden gnomes</span></button>
+<button class="tile" type="button" data-full="img/img_7733_2.jpg" data-alt="Frogs" aria-label="View larger: Frogs"><img src="img/img_7733_2.jpg" alt="Frogs" width="1300" height="975" loading="lazy" decoding="async"><span>Frogs</span></button>
+<button class="tile" type="button" data-full="img/img_7779_2.jpg" data-alt="Bunnies" aria-label="View larger: Bunnies"><img src="img/img_7779_2.jpg" alt="Bunnies" width="975" height="1300" loading="lazy" decoding="async"><span>Bunnies</span></button>
+<button class="tile" type="button" data-full="img/img_6588_2.jpg" data-alt="Little dogs" aria-label="View larger: Little dogs"><img src="img/img_6588_2.jpg" alt="Little dogs" width="1040" height="1300" loading="lazy" decoding="async"><span>Little dogs</span></button>
+<button class="tile" type="button" data-full="img/img_1257_2.jpg" data-alt="Kittens" aria-label="View larger: Kittens"><img src="img/img_1257_2.jpg" alt="Kittens" width="1300" height="975" loading="lazy" decoding="async"><span>Kittens</span></button>
+<button class="tile" type="button" data-full="img/img_7778_2.jpg" data-alt="Toadstools" aria-label="View larger: Toadstools"><img src="img/img_7778_2.jpg" alt="Toadstools" width="975" height="1300" loading="lazy" decoding="async"><span>Toadstools</span></button>
+<button class="tile" type="button" data-full="img/img_0090.jpg" data-alt="Snails" aria-label="View larger: Snails"><img src="img/img_0090.jpg" alt="Snails" width="975" height="1300" loading="lazy" decoding="async"><span>Snails</span></button></div></div>
+<div class="cat" id="gifts"><div class="cat-head"><h3>Gifts &amp; Seasonal</h3><p>Christmas ornaments, snowmen, hearts, plaques and other little gifts.</p></div><div class="grid"><button class="tile" type="button" data-full="img/img_5072.jpg" data-alt="Carlsbad surfing Santa ornament" aria-label="View larger: Carlsbad surfing Santa ornament"><img src="img/img_5072.jpg" alt="Carlsbad surfing Santa ornament" width="975" height="1300" loading="lazy" decoding="async"><span>Carlsbad surfing Santa ornament</span></button>
+<button class="tile" type="button" data-full="img/img_6296.jpg" data-alt="Woodland ornaments" aria-label="View larger: Woodland ornaments"><img src="img/img_6296.jpg" alt="Woodland ornaments" width="1300" height="975" loading="lazy" decoding="async"><span>Woodland ornaments</span></button>
+<button class="tile" type="button" data-full="img/img_1247.jpg" data-alt="Santa ornaments" aria-label="View larger: Santa ornaments"><img src="img/img_1247.jpg" alt="Santa ornaments" width="975" height="1300" loading="lazy" decoding="async"><span>Santa ornaments</span></button>
+<button class="tile" type="button" data-full="img/img_6293.jpg" data-alt="Cupcake and Santa ornaments" aria-label="View larger: Cupcake and Santa ornaments"><img src="img/img_6293.jpg" alt="Cupcake and Santa ornaments" width="1300" height="975" loading="lazy" decoding="async"><span>Cupcake and Santa ornaments</span></button>
+<button class="tile" type="button" data-full="img/img_1226_2.jpg" data-alt="Snowmen" aria-label="View larger: Snowmen"><img src="img/img_1226_2.jpg" alt="Snowmen" width="1300" height="975" loading="lazy" decoding="async"><span>Snowmen</span></button>
+<button class="tile" type="button" data-full="img/img_8075.jpg" data-alt="Snowmen in top hats" aria-label="View larger: Snowmen in top hats"><img src="img/img_8075.jpg" alt="Snowmen in top hats" width="1300" height="975" loading="lazy" decoding="async"><span>Snowmen in top hats</span></button>
+<button class="tile" type="button" data-full="img/img_5074.jpg" data-alt="Angel ornament" aria-label="View larger: Angel ornament"><img src="img/img_5074.jpg" alt="Angel ornament" width="975" height="1300" loading="lazy" decoding="async"><span>Angel ornament</span></button>
+<button class="tile" type="button" data-full="img/img_5076.jpg" data-alt="Toy soldier ornament" aria-label="View larger: Toy soldier ornament"><img src="img/img_5076.jpg" alt="Toy soldier ornament" width="975" height="1300" loading="lazy" decoding="async"><span>Toy soldier ornament</span></button>
+<button class="tile" type="button" data-full="img/img_7760_2.jpg" data-alt="Hearts" aria-label="View larger: Hearts"><img src="img/img_7760_2.jpg" alt="Hearts" width="975" height="1300" loading="lazy" decoding="async"><span>Hearts</span></button>
+<button class="tile" type="button" data-full="img/img_8428_2.jpg" data-alt="Pink hearts" aria-label="View larger: Pink hearts"><img src="img/img_8428_2.jpg" alt="Pink hearts" width="975" height="1300" loading="lazy" decoding="async"><span>Pink hearts</span></button>
+<button class="tile" type="button" data-full="img/img_5757.jpg" data-alt="Take Time to Smell the Flowers plaque" aria-label="View larger: Take Time to Smell the Flowers plaque"><img src="img/img_5757.jpg" alt="Take Time to Smell the Flowers plaque" width="975" height="1300" loading="lazy" decoding="async"><span>Take Time to Smell the Flowers plaque</span></button>
+<button class="tile" type="button" data-full="img/img_9313.jpg" data-alt="Hello Beautiful plaque" aria-label="View larger: Hello Beautiful plaque"><img src="img/img_9313.jpg" alt="Hello Beautiful plaque" width="975" height="1300" loading="lazy" decoding="async"><span>Hello Beautiful plaque</span></button>
+<button class="tile" type="button" data-full="img/img_8675.jpg" data-alt="Aloha plaque" aria-label="View larger: Aloha plaque"><img src="img/img_8675.jpg" alt="Aloha plaque" width="975" height="1300" loading="lazy" decoding="async"><span>Aloha plaque</span></button></div></div>
+
+    </div>
+  </section>
+
+  <section id="shows" class="shows">
+    <div class="wrap shows-grid">
+      <div class="shows-text">
+        <p class="kicker">Come find us</p>
+        <h2 class="sec-title">See it in person</h2>
+        <p>We sell at craft fairs and art shows around Southern California. Pottery is better in your hands than on a screen.</p>
+        <div class="upcoming">
+          <h3>Upcoming shows</h3>
+          <div class="show">
+            <b>Carlsbad Village Street Faire</b>
+            <time datetime="2026-11-01">Sunday, November 1, 2026 · 8 am to 4 pm</time>
+            <span>Find our booth on Roosevelt Street, between Carlsbad Village Drive and Grand Avenue.</span>
+          </div>
+          <p>More dates coming. Follow <a href="https://www.instagram.com/jenniferburnettpottery/" target="_blank" rel="noopener">@jenniferburnettpottery</a> to see where we'll be next.</p>
+        </div>
+        <p class="pay">At our booth we take cash, Venmo and Zelle. No credit cards.</p>
+      </div>
+      <figure class="booth">
+        <img src="img/img_0712.jpg" alt="The Burnett Pottery booth" width="1300" height="975" loading="lazy" decoding="async">
+        <figcaption>Look for the blue umbrella</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="kicker">Say hello</p>
+      <h2 class="sec-title">Questions about a piece or a show?</h2>
+      <p>Email Jennifer, or send us a message on Instagram.</p>
+      <div class="email">
+        <a href="mailto:jenpottery@cox.net" id="email">jenpottery@cox.net</a>
+        <button class="copy" type="button" id="copy-email">Copy</button>
+      </div>
+      <a class="btn ghost" href="https://www.instagram.com/jenniferburnettpottery/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@jenniferburnettpottery</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="checks" aria-hidden="true"></div>
+  <div class="wrap">
+    <span>Burnett Pottery · Carlsbad, California</span>
+    <span class="hand">made by hand, one piece at a time</span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-inner">
+    <img id="lb-img" alt="">
+    <div class="lb-row">
+      <button type="button" id="lb-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <p class="lb-cap" id="lb-cap"></p>
+      <button type="button" id="lb-next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      <button type="button" id="lb-close" aria-label="Close photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var tiles=[].slice.call(document.querySelectorAll('.tile'));
+  var dlg=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap');
+  var group=[],i=0;
+  function show(){var t=group[i];img.src=t.getAttribute('data-full');img.alt=t.getAttribute('data-alt');cap.textContent=t.getAttribute('data-alt');}
+  tiles.forEach(function(t){t.addEventListener('click',function(){
+    group=[].slice.call(t.closest('.grid').querySelectorAll('.tile'));i=group.indexOf(t);show();
+    if(dlg.showModal){dlg.showModal();}else{dlg.setAttribute('open','');}
+  });});
+  function step(d){if(!group.length)return;i=(i+d+group.length)%group.length;show();}
+  document.getElementById('lb-prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('lb-next').addEventListener('click',function(){step(1)});
+  document.getElementById('lb-close').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.setAttribute('controls','');});}}catch(e){}
+  var btn=document.getElementById('copy-email');
+  btn.addEventListener('click',function(){
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1800);};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';};
+    try{navigator.clipboard.writeText('jenpottery@cox.net').then(done,sel);}catch(e){sel();}
+  });
+})();
+</script>
+
+</body>
+</html>
